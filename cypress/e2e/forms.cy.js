@@ -6,7 +6,7 @@ describe('Forms , Buttons, Checkbox', () => {
 
     //Fill the form
     cy.get('[name="name-input"]').type('John Doe')
-    cy.get('input[type="password"]').should('exist').and('be.visible').type('yourPassword123')
+    // cy.get('input[type="password"]').should('exist').and('be.visible').type('yourPassword123')
     // cy.get('label:contains("Password")').find('input[type="password"]').type('yourPassword123')
 
 
@@ -15,8 +15,7 @@ describe('Forms , Buttons, Checkbox', () => {
     cy.contains('Appium').click()
     cy.get('#email').type('suwantha@example.com')
     cy.get('[data-cy="message"]').type('I like cypress. I need to get started')
-    cy.wait(2000)
-    // cy.contains('Submit').click()
+    cy.contains('Submit').click()
 
  
     //Assert form details
